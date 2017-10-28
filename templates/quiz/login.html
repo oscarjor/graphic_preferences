@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<title>Graphic P.</title>
+{% load staticfiles %}
+<link href="{% static 'css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+<link href="{% static 'css/custom.css' %}?v=20" type="text/css" rel="stylesheet" media="screen,projection">
+</head>
+
+
+<body class="loginbody">
+
+<div class="container">
+
+<div class="jumbotron loginbox">
+
+<form class="login-form" action="/login/" method="POST" --disable-ignore-autocomplete-off autocomplete="off" >
+{% csrf_token %}
+
+{% if message != "" %}
+    <span>{{message}}</span>
+{% endif %}
+
+  <div class="form-group">
+    <input type="text" autocomplete="new-password" class="form-control" name="username" id="username" aria-describedby="User" placeholder="User" value="">
+  </div>
+
+  <div class="form-group">
+    <input type="password" autocomplete="new-password" class="form-control" name="password" id="password" placeholder="Password" value="">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Login</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>

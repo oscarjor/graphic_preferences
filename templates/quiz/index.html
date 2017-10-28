@@ -1,0 +1,40 @@
+{% extends "quiz/base.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+{% if message != "" %}
+
+<br>
+
+<div class="alert alert-success" role="alert">
+  {{message}}
+</div>
+
+{% endif %}
+
+<br>
+
+<h4>Please select the image of your preference:</h4>
+
+<br>
+
+<div>
+
+<img category="sports" src="{{url1}}" class="rounded float-left image" alt="...">
+<img category="love" src="{{url2}}" class="rounded float-right image" alt="...">
+
+<form id="selection" action="/" method="POST">
+  {% csrf_token %}
+  <input type="hidden" id="image_url" name="image_url" value="">
+  <input type="hidden" id="category" name="category" value="">
+</form>
+
+</div>
+
+<br>
+
+
+
+{% endblock %}

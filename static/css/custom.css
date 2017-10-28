@@ -1,0 +1,25 @@
+
+/*
+
+Custom Styles By: Oscar O.
+
+*/
+
+
+/* Login */
+
+.loginbox {
+
+	  width: 25%;   
+	  height: 300px;
+    position: absolute;
+    left:0; 
+    right:0;
+    top:0; 
+    bottom:0;
+    margin:auto;
+}
+
+.image {
+    cursor: pointer;
+}
