@@ -58,7 +58,7 @@ def index(request):
 			selection = Selection()
 			selection.user = request.user
 			selection.image_url = image_url
-			selection.category = category
+			selection.image_category = category
 			selection.save()
 			context = {'message': 'Your selection has been saved.', 'url1': url1, 'url2': url2, 'category1': category1, 'category2': category2}
 		else:
